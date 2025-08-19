@@ -1,22 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #9e0506;
-    margin: 0;
-    padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-.logo-container {
-    margin-bottom: 20px;
-}
-
-.logo-container img {
-    max-width: 250px;
-    height: auto;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
 }
 
 .container {
@@ -31,7 +21,6 @@ body {
 
 h1 {
     color: #333;
-    margin-top: 0;
 }
 
 input, button {
