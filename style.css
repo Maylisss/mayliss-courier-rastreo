@@ -1,11 +1,22 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #9e0506;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 250px;
+    height: auto;
 }
 
 .container {
@@ -14,10 +25,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
+    max-width: 500px;
 }
 
 h1 {
     color: #333;
+    margin-top: 0;
 }
 
 input, button {
