@@ -4,11 +4,10 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
     const trackingId = document.getElementById('trackingId').value.toUpperCase().trim();
     const resultDiv = document.getElementById('result');
 
-    const googleSheetsApiUrl = 'https://script.google.com/macros/s/AKfycbxwbBf15IONKcMcrDeGCGZlWFZS9IxxQYJaOmD2MdM00QGLstN-V0xKk5MHB0zIu7d9/exec';
-
+    // Mapeo de ubicaciones a emojis
     const flags = {
-        "Ecuador": "🇪🇨",
-        "Estados Unidos": "🇺🇸",
+        "Ecuador": "🟡",
+        "Estados Unidos": "🔵",
         "En tránsito": "✈️"
     };
 
@@ -24,6 +23,8 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
         "ENTREGADO": "status-entregado"
     };
 
+    const googleSheetsApiUrl = 'https://script.google.com/macros/s/AKfycbxwbBf15IONKcMcrDeGCGZlWFZS9IxxQYJaOmD2MdM00QGLstN-V0xKk5MHB0zIu7d9/exec';
+
     fetch(googleSheetsApiUrl)
         .then(response => {
             if (!response.ok) {
@@ -34,14 +35,17 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
         .then(data => {
             if (data[trackingId]) {
                 const packageInfo = data[trackingId];
+                
+                const cleanDate = packageInfo.fecha.split('T')[0];
+
                 const statusClass = statusClasses[packageInfo.estado] || '';
                 const flag = flags[packageInfo.ubicacion] || '';
-
+                
                 resultDiv.innerHTML = `
                     <div class="package-info">
                         <p><strong>Estado:</strong> <span class="${statusClass}">${packageInfo.estado}</span></p>
                         <p><strong>Ubicación:</strong> <span class="location-${packageInfo.ubicacion.toLowerCase().replace(/\s/g, '-')}">${flag} ${packageInfo.ubicacion}</span></p>
-                        <p><strong>Última actualización:</strong> ${packageInfo.fecha}</p>
+                        <p><strong>Última actualización:</strong> ${cleanDate}</p>
                     </div>
                 `;
             } else {
