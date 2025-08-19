@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+input {
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.error {
+    color: red;
+}
+
+/* Colores para los estados */
+.status-recolectado { color: #8A2BE2; }
+.status-en-consolidado { color: #FFA500; }
+.status-ingresa-a-aerolinea { color: #0000FF; }
+.status-en-espera-de-turno { color: #DC143C; }
+.status-proceso-de-aforo { color: #808000; }
+.status-salida-de-aduana { color: #32CD32; }
+.status-en-clasificacion { color: #4B0082; }
+.status-lista-para-envio { color: #00BFFF; }
+.status-entregado { color: #2E8B57; }
+
+/* Colores para las ubicaciones */
+.location-ecuador { color: #FFD700; }
+.location-estados-unidos { color: #007bff; }
+.location-en-transito { color: #A9A9A9; }
+
+/* Estilos para el texto de resultado */
+.package-info p {
+    margin: 5px 0;
+}

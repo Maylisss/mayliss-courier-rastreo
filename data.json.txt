@@ -1,0 +1,26 @@
+{
+  "MC0001": {
+    "cliente": "Laura G.",
+    "estado": "PROCESO DE AFORO COMPLETADO",
+    "fecha": "2025-08-19",
+    "ubicacion": "Ecuador"
+  },
+  "MC0002": {
+    "cliente": "Carlos P.",
+    "estado": "RECOLECTADO",
+    "fecha": "2025-08-19",
+    "ubicacion": "Estados Unidos"
+  },
+  "MC0003": {
+    "cliente": "Ana R.",
+    "estado": "INGRESA A AEROLÍNEA",
+    "fecha": "2025-08-18",
+    "ubicacion": "En tránsito"
+  },
+  "MC0004": {
+    "cliente": "Pedro M.",
+    "estado": "ENTREGADO",
+    "fecha": "2025-08-17",
+    "ubicacion": "Ecuador"
+  }
+}

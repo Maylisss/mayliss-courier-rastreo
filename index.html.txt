@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rastreo de Paquetes | Mayliss Courier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rastrea tu Envío con Mayliss Courier</h1>
+        <form id="trackingForm">
+            <input type="text" id="trackingId" placeholder="Ingresa tu número de guía" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
