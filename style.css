@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    background-color: #9e0506;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@ button:hover {
 .status-entregado { color: #2E8B57; }
 
 /* Colores para las ubicaciones */
-.location-ecuador { color: #FFD700; }
+.location-ecuador { color: #DAA520; }
 .location-estados-unidos { color: #007bff; }
 .location-en-transito { color: #A9A9A9; }
 
