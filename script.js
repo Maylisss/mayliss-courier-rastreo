@@ -4,7 +4,6 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
     const trackingId = document.getElementById('trackingId').value.toUpperCase().trim();
     const resultDiv = document.getElementById('result');
 
-    // ** Reemplaza la URL de abajo con la URL de tu Google Apps Script **
     const googleSheetsApiUrl = 'https://script.google.com/macros/s/AKfycbxwbBf15IONKcMcrDeGCGZlWFZS9IxxQYJaOmD2MdM00QGLstN-V0xKk5MHB0zIu7d9/exec';
 
     const flags = {
