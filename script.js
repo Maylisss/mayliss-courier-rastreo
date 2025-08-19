@@ -4,14 +4,15 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
     const trackingId = document.getElementById('trackingId').value.toUpperCase().trim();
     const resultDiv = document.getElementById('result');
 
-    // Mapeo de ubicaciones a banderas
+    // ** Reemplaza la URL de abajo con la URL de tu Google Apps Script **
+    const googleSheetsApiUrl = 'https://script.google.com/macros/s/AKfycbxwbBf15IONKcMcrDeGCGZlWFZS9IxxQYJaOmD2MdM00QGLstN-V0xKk5MHB0zIu7d9/exec';
+
     const flags = {
         "Ecuador": "🇪🇨",
         "Estados Unidos": "🇺🇸",
         "En tránsito": "✈️"
     };
 
-    // Mapeo de estados a clases CSS
     const statusClasses = {
         "RECOLECTADO": "status-recolectado",
         "EN CONSOLIDADO": "status-en-consolidado",
@@ -24,14 +25,19 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
         "ENTREGADO": "status-entregado"
     };
 
-    fetch('data.json')
-        .then(response => response.json())
+    fetch(googleSheetsApiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data[trackingId]) {
                 const packageInfo = data[trackingId];
                 const statusClass = statusClasses[packageInfo.estado] || '';
                 const flag = flags[packageInfo.ubicacion] || '';
-                
+
                 resultDiv.innerHTML = `
                     <div class="package-info">
                         <p><strong>Estado:</strong> <span class="${statusClass}">${packageInfo.estado}</span></p>
