@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #9e0506;
+    background-image: linear-gradient(to top, rgba(158, 5, 6, 0.8) 0%, rgba(158, 5, 6, 1) 70%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    flex-direction: column;
 }
 
 .container {
@@ -76,4 +77,10 @@ button:hover {
 /* Estilos para el texto de resultado */
 .package-info p {
     margin: 5px 0;
+}
+.flag-icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
 }

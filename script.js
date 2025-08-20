@@ -4,10 +4,10 @@ document.getElementById('trackingForm').addEventListener('submit', function(even
     const trackingId = document.getElementById('trackingId').value.toUpperCase().trim();
     const resultDiv = document.getElementById('result');
 
-    // Mapeo de ubicaciones a emojis
+    // Mapeo de ubicaciones a emojis o imágenes
     const flags = {
-        "Ecuador": "🟡",
-        "Estados Unidos": "🔵",
+        "Ecuador": "<img src='logoecu.png' class='flag-icon'>",
+        "Estados Unidos": "<img src='logousa.png' class='flag-icon'>",
         "En tránsito": "✈️"
     };
 
