@@ -80,7 +80,6 @@ button:hover {
 .package-info p {
     margin: 5px 0;
 }
-
 .flag-icon {
     width: 20px;
     height: auto;
@@ -103,6 +102,38 @@ button:hover {
 }
 
 .footer a {
-    color: white; /* Para que los enlaces sean blancos */
-    text-decoration: none; /* Quita el subrayado */
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button-container {
+    position: fixed;
+    bottom: 80px; 
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-button p {
+    margin: 0;
+    line-height: 1.2;
 }
