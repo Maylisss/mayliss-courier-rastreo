@@ -22,18 +22,8 @@ body {
     margin-bottom: 60px; 
 }
 
-.logo-container {
-    margin-bottom: 20px;
-}
-
-.logo-container img {
-    max-width: 400px;
-    height: auto;
-}
-
 h1 {
     color: #333;
-    margin-top: 0;
 }
 
 input, button {
@@ -90,6 +80,7 @@ button:hover {
 .package-info p {
     margin: 5px 0;
 }
+
 .flag-icon {
     width: 20px;
     height: auto;
@@ -109,4 +100,9 @@ button:hover {
     width: 100%;
     box-sizing: border-box;
     font-size: 0.9em;
+}
+
+.footer a {
+    color: white; /* Para que los enlaces sean blancos */
+    text-decoration: none; /* Quita el subrayado */
 }
