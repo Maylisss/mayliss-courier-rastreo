@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #9e0506;
-    background-image: linear-gradient(to top, rgba(158, 5, 6, 0.8) 0%, rgba(158, 5, 6, 1) 70%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #ffffff;
     margin: 0;
+    padding: 0;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .container {
@@ -18,10 +19,21 @@ body {
     text-align: center;
     width: 100%;
     max-width: 500px;
+    margin-bottom: 60px; 
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 400px;
+    height: auto;
 }
 
 h1 {
     color: #333;
+    margin-top: 0;
 }
 
 input, button {
@@ -71,7 +83,7 @@ button:hover {
 
 /* Colores para las ubicaciones */
 .location-ecuador { color: #DAA520; }
-.location-estados-unidos { color: #007bff; }
+.location-estados-unidos { color: #00008B; font-weight: bold; }
 .location-en-transito { color: #A9A9A9; }
 
 /* Estilos para el texto de resultado */
@@ -83,4 +95,18 @@ button:hover {
     height: auto;
     vertical-align: middle;
     margin-right: 5px;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #9e0506;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9em;
 }
